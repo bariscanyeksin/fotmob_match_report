@@ -2,4 +2,3 @@ Created with Flask (Python), this application provides the match report of any m
 
 Here is an example:
 
-![plot](https://github.com/bariscanyeksin/fotmob_shotmap/assets/82212277/bcfbdc20-3d56-4fd8-93df-81fc25586676)
