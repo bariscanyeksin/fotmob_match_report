@@ -34,7 +34,7 @@
         <br>
         <br>
         <select id="mySelect" onchange="myFunction()" class="liste">
-        <option value="selectagame">Select a game.</option>
+        <option value="selectagame">Select a match</option>
         {% for row in choices %}
         <option value="{{row[0]}}"{% if row[0] == state.choice %} SELECTED {% endif %} class="liste_option">{{ row[1] }}</option>
         {% endfor %}
