@@ -92,7 +92,7 @@ def result():
 
         else:
             if len(data) == 3:
-                flash('Match ID is wrong!')
+                flash('Match is not selected!')
                 return redirect("/")
 
             else:
