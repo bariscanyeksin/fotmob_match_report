@@ -1,0 +1,7 @@
+Flask
+matplotlib
+mplsoccer
+pandas
+Pillow
+gunicorn
+datetime

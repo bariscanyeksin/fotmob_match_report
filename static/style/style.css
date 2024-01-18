@@ -1,0 +1,274 @@
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: #272727;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding-bottom: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.form_box .team_box {
+  position: relative;
+  padding-top: 0px;
+  display: none;
+}
+
+.form_box .team_box input {
+  
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+label {
+  font-family: 'Poppins';
+  color: white;
+  text-align: center;
+}
+
+.error_box {
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 13%;
+  left: 0; 
+  right: 0;
+  display: inline-block;
+  width: auto;
+}
+
+.two_icon {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  margin:0 auto 0 auto;
+  padding-top: 40px;
+}
+
+.fotmob_icon {
+  width:35px;
+  height:33px;
+  opacity: 0.29;
+  margin:0 auto 0 auto;
+}
+
+.line_icon {
+  width: auto;
+  height: 45px;
+  opacity: 0.7;
+  margin:0 auto -6px auto;
+}
+
+.superlig_icon {
+  width:35px;
+  height: 36px;
+  opacity: 0.5;
+  margin:0 auto 0 auto;
+}
+
+.submit_button {
+  background-color: transparent;
+  cursor: pointer;
+  content: "";
+  display: none;
+}
+
+.team_info {
+  font-family: 'Poppins';
+  text-align: center;
+  width: 260px;
+}
+
+.option_value {
+  font-family: 'Poppins';
+  width: 200px;
+  height: 30px;
+  margin-top: 8px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.option_value_text {
+  font-size: 16px;
+}
+
+select {
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.liste{
+  position: relative;
+  font-family: 'Poppins';
+  width: auto;
+  height: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #131313;
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .liste {
+    width: 400px;
+  }
+}
+
+.liste_option{
+  color: white;
+  background-color: #131313;
+}
+
+.macid_input {
+  font-family: 'Poppins';
+  text-align: center;
+  margin-top: 8px;
+  width: 190px;
+  height: 25px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.macidtext {
+  text-align: center;
+}
+
+.spoiler_button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding-left: 5px;
+  cursor: pointer;
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-size: 12px;
+  width: 5px;
+}
+
+.macid_img {
+  display:none;
+  text-align: center;
+  padding-top:5px;
+  width:300px;
+  transition-delay:0.5s;
+}
+
+span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+  cursor: pointer;
+  padding-top: 50px;
+}
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: "Poppins";
+  
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "Oluştur";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: "Poppins";
+}
+span a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+  font-family: "Poppins";
+}
+span a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+  background: #009A57;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+span a:hover{
+  transform: translateZ(-30px) rotateX(-90deg);
+  transition-duration: 0.7s;
+}
+
+.button-24 {
+  background: #009A57;
+  border: 2px solid #009A57;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 10px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  letter-spacing: 1.5px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #009A57;
+  transition-duration: 0.6s;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+.button_div {
+  margin-top: 20px;
+}

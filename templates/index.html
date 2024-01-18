@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript" src="{{ url_for('static', filename='script/script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>FotMob Shotmap</title>
+</head>
+<body>
+    <div class="error_box">
+        <label>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+
+            {% endif %}
+        {% endwith %}
+        </label>
+    </div>
+    <div class="form_box">
+    <button class="spoiler_button" onclick="showPicture()" style="display: none;">?</button>  
+    <form action="/plot.png" method="POST" target="_blank">
+        <img class="macid_img" id="macid_img" src="macid_img" style="display: none;"/>
+        <label class="macidtext" style="display: none;">FotMob Match ID</label>
+        <br>
+        <input type="text" id="macId" name="macId" class="macid_input" maxlength="7" readonly  style="display: none;">
+        <br>
+        <br>
+        <select id="mySelect" onchange="myFunction()" class="liste">
+        <option value="selectagame">Select a game.</option>
+        {% for row in choices %}
+        <option value="{{row[0]}}"{% if row[0] == state.choice %} SELECTED {% endif %} class="liste_option">{{ row[1] }}</option>
+        {% endfor %}
+        </select>
+        <br>
+        <div class="button_div"><button class="button-24" role="button">Create</button></div>
+        <div class="two_icon">
+            <img src="../static/images/fotmob_icon.png" alt="FotMob Icon" class="fotmob_icon">
+            <img src="../static/images/line.png" alt="Line" class="line_icon">
+            <img src="../static/images/superlig_icon.png" alt="Süper Lig Icon" class="superlig_icon">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
