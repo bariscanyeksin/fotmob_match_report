@@ -32,7 +32,7 @@ app.secret_key = "FotMob_Shotmap"
 @app.route("/", methods=["POST", "GET"])
 def index():
 
-    with open('static\\script\\fotmob_data.js', encoding='utf-8') as fh:
+    with open('static/script/fotmob_data.js', encoding='utf-8') as fh:
         data = json.load(fh)
 
     maclar = data['props']['pageProps']['matches']['allMatches']
