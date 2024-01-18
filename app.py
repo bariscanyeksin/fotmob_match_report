@@ -32,8 +32,17 @@ app.secret_key = "FotMob_Shotmap"
 @app.route("/", methods=["POST", "GET"])
 def index():
 
-    with open('static/script/fotmob_data.js', encoding='utf-8') as fh:
-        data = json.load(fh)
+    url = 'https://www.fotmob.com/leagues/71/matches/super-lig'
+
+    r = requests.get(url)
+
+    soup = BeautifulSoup(r.text, 'html.parser')
+
+    all_scripts = soup.find_all('script')
+
+    matches_script = all_scripts[32].text
+
+    data = json.loads(matches_script)
 
     maclar = data['props']['pageProps']['matches']['allMatches']
 
