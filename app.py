@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 import json
 import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 
 matplotlib.rcParams["figure.dpi"] = 300
 
