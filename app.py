@@ -78,7 +78,7 @@ def result():
             data = json.load(url)
 
         if matchId == '':
-            flash('Game is not selected!')
+            flash('Match is not selected!')
             return redirect("/")
 
         else:
@@ -91,7 +91,7 @@ def result():
                     data["content"]["shotmap"]["shots"])
 
                 if len(shotmap_kontrol) == 0:
-                    flash('Detailed data is not available for the selected game!')
+                    flash('Detailed data is not available for the selected match!')
                     return redirect("/")
 
                 else:
