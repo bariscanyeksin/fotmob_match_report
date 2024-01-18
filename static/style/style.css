@@ -26,6 +26,12 @@ body {
   align-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .form_box {
+    width: 100%;
+  }
+}
+
 .form_box .team_box {
   position: relative;
   padding-top: 0px;
