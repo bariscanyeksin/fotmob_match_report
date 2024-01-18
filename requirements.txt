@@ -5,3 +5,5 @@ pandas
 Pillow
 gunicorn
 datetime
+requests
+bs4
