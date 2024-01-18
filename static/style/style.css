@@ -30,6 +30,12 @@ body {
   .form_box {
     width: 100%;
   }
+  body {
+    width: 100%;
+  }
+  html {
+    width: 100%;
+  }
 }
 
 .form_box .team_box {
