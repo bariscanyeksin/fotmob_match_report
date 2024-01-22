@@ -86,7 +86,7 @@ def result():
         with urllib.request.urlopen(json_url) as url:
             data = json.load(url)
 
-        if matchId == '':
+        if ((matchId == '') | (matchId == 'selectagame')):
             flash('Match is not selected!')
             return redirect("/")
 
