@@ -322,7 +322,7 @@ def result():
                     ax.text(41, 35.5, str(xgot_1), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
                     ax.text(41, 30.5, str(tot_shots_1), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
                     ax.text(41, 25.5, str(shots1_ot), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
-                    ax.text(41, 20.5, str(bigchances_1)+"%", size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
+                    ax.text(41, 20.5, str(bigchances_1), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
                     ax.text(41, 15.5, str(pozisyon_1)+"%", size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
 
                     ax.text(64, 50.5, str(tot_goals_2), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
@@ -331,7 +331,7 @@ def result():
                     ax.text(64, 35.5, str(xgot_2), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
                     ax.text(64, 30.5, str(tot_shots_2), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
                     ax.text(64, 25.5, str(shots2_ot), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
-                    ax.text(64, 20.5, str(bigchances_2)+"%", size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
+                    ax.text(64, 20.5, str(bigchances_2), size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
                     ax.text(64, 15.5, str(pozisyon_2)+"%", size=15, ha="center", fontproperties=prop, bbox=back_box_2, color='black')
 
                     ax.text(41, 55, str(team1name), size=18, ha="center", fontproperties=prop_bold, color='white')
