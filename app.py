@@ -345,7 +345,7 @@ def result():
                             alignment='center', columnspacing=1, handletextpad=0.4, prop=prop, bbox_to_anchor=(0.5, -0.02))
 
                     plt.gcf().text(0.0137,0.198, '@bariscanyeksin', va='center', fontsize=15,
-                                        fontfamily='Poppins', color='white', rotation=270)
+                                        fontproperties=prop, color='white', rotation=270)
 
                     # Set the title
                     fig.text(0.115, 0.945, team1name + " " + skor + " " + team2name, size=30, ha="left", fontproperties=prop_bold, color='white')
