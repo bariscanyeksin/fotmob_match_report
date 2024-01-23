@@ -115,8 +115,8 @@ def result():
                     IMAGE_URL_3 = 'https://images.fotmob.com/image_resources/logo/leaguelogo/dark/' + str(turnuvaID) + '.png'
                     logo_3 = Image.open(urlopen(IMAGE_URL_3))
 
-                    skor_bilgisi = pd.DataFrame(data["header"]["status"])
-                    skor = str(skor_bilgisi["scoreStr"][0])
+                    skor_bilgisi = data["header"]["status"]
+                    skor = str(skor_bilgisi["scoreStr"])
 
                     tarih_bilgisi = bilgiler["matchTimeUTCDate"][0]
                     tarih_bilgisi = str(tarih_bilgisi[:10])
