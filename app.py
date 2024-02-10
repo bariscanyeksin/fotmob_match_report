@@ -32,41 +32,36 @@ app.secret_key = "FotMob_Shotmap"
 @app.route("/", methods=["POST", "GET"])
 def index():
 
-    url = 'https://www.fotmob.com/leagues/71/matches/super-lig'
+    json_url = "https://www.fotmob.com/api/leagues?id=71&ccode3=TUR"
 
-    r = requests.get(url)
-
-    soup = BeautifulSoup(r.text, 'html.parser')
-
-    all_scripts = soup.find_all('script')
-
-    matches_script = all_scripts[32].text
-
-    data = json.loads(matches_script)
-
-    maclar = data['props']['pageProps']['matches']['allMatches']
-
+    with urllib.request.urlopen(json_url) as url:
+        data = json.load(url)
+    
+    table = data['matches']['allMatches']
+    df = pd.json_normalize(table)
+    df = df[df['status.reason.longKey'] == 'finished']
+    
     match_id_list = []
     mac_metin_list = []
-
-    for i in range(len(maclar)):
-
-        df = pd.DataFrame(data['props']['pageProps']['matches']['allMatches'][i])
-
-        if (df['status']['finished'] == True):
-
-            match_id = df['id'][0]
-
-            ev = df['home']['name']
-            dep = df['away']['name']
-            skor = df['status']['scoreStr']
-            week = df['round'][0]
-
-            mac_metin = "Week " + str(week) + " | " + str(ev) + " " + str(skor) + " " + str(dep) 
-
-            match_id_list.append(match_id)
-            mac_metin_list.append(mac_metin)
-
+    
+    i = 0
+    
+    while i < len(df):
+    
+        match_id = df['id'].iloc[i]
+    
+        ev = df['home.name'].iloc[i]
+        dep = df['away.name'].iloc[i]
+        skor = df['status.scoreStr'].iloc[i]
+        week = df['round'].iloc[i]
+    
+        mac_metin = "Week " + str(week) + " | " + str(ev) + " " + str(skor) + " " + str(dep) 
+    
+        match_id_list.append(match_id)
+        mac_metin_list.append(mac_metin)
+    
+        i += 1
+    
     merged_list = [(match_id_list[i], mac_metin_list[i]) for i in range(0, len(match_id_list))][::-1]
 
     choices = merged_list
