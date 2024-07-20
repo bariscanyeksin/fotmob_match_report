@@ -162,7 +162,7 @@ def result():
 
                     lig = bilgiler["parentLeagueName"] + " " + bilgiler["parentLeagueSeason"]
 
-                    lig_bilgisi = lig[0]
+                    lig_bilgisi = "Super Lig 2023/2024"
 
                     goal_1 = shots1[shots1["eventType"] == "Goal"].copy()
                     miss_1 = shots1[(shots1["eventType"] == "Miss") | (shots1["eventType"] == "Post")].copy()
