@@ -32,7 +32,7 @@ app.secret_key = "FotMob_Shotmap"
 @app.route("/", methods=["POST", "GET"])
 def index():
 
-    season = "2023/2024"
+    season = "2024/2025"
 
     json_url = "https://www.fotmob.com/api/leagues?id=71&ccode3=TUR&season=" + season
 
